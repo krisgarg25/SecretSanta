@@ -21,8 +21,8 @@ interface GroupData {
 }
 
 export default function GroupPage() {
-    const { id } = useParams();
-    const groupId = Array.isArray(id) ? id[0] : id;
+    const params = useParams();
+    const groupId = (Array.isArray(params.id) ? params.id[0] : params.id) as string;
     const router = useRouter();
 
     const [user, setUser] = useState<User | null>(null);
@@ -88,6 +88,7 @@ export default function GroupPage() {
     };
 
     const copyGroupId = () => {
+        if (!groupId) return;
         navigator.clipboard.writeText(groupId);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
@@ -275,7 +276,7 @@ export default function GroupPage() {
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                {groupData.members.map((member, index) => (
+                                {groupData.members.map((member) => (
                                     <div
                                         key={member.email}
                                         className="bg-black/30 border border-gray-800 p-4 rounded-xl flex items-center gap-4 hover:border-red-700/50 transition group"
