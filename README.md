@@ -1,6 +1,8 @@
 # 🎅 Secret Santa - Anonymous Gift Exchange Platform
 [https://secret-santa-1fyb.vercel.app/login]
 
+[![Portfolio](https://img.shields.io/badge/krisgarg.in-Portfolio-0A0A0A?style=for-the-badge&logo=google-chrome&logoColor=white)](https://krisgarg.in)
+
 <div align="center">
 
 ![Secret Santa](https://img.shields.io/badge/Secret%20Santa-Christmas%202024-red?style=for-the-badge&logo=christmas)
